@@ -8,6 +8,9 @@
         app:layoutDescription="@xml/motion_scene"
         tools:context=".MainActivity">
 
+    <!-- This view plays the role of the toolbar background -->
+    <!-- Initially it is transparent (alpha = 0) -->
+    <!-- Transparency changes as user drags the recycler view up -->
     <View
             android:id="@+id/background"
             android:layout_width="match_parent"
@@ -19,6 +22,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/recyclerView"/>
 
+    <!-- Initially ImageView has these dimensions -->
     <ImageView
             android:id="@+id/profilePicture"
             android:layout_width="140dp"

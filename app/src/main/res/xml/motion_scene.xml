@@ -8,6 +8,7 @@
             app:constraintSetEnd="@id/end"
             app:duration="1000">
 
+        <!-- Transition is invoked by dragging the recycler view up -->
         <OnSwipe
                 app:touchAnchorId="@+id/recyclerView"
                 app:touchAnchorSide="top"
@@ -16,12 +17,15 @@
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
+        <!-- At the starting point background is transparent -->
+        <!-- And ImageView has dimensions declared in activity_mail.xml file -->
         <Constraint android:id="@id/background">
             <PropertySet app:alpha="0"/>
         </Constraint>
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
+        <!-- In the end ImageView is small -->
         <Constraint
                 android:id="@id/profilePicture"
                 android:layout_width="40dp"
@@ -33,6 +37,7 @@
                 android:layout_marginLeft="8dp">
         </Constraint>
 
+        <!-- In the end background is not transparent -->
         <Constraint android:id="@id/background">
             <PropertySet app:alpha="1"/>
         </Constraint>
